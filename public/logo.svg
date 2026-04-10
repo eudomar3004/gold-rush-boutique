@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 130" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&amp;family=Playfair+Display:ital@1&amp;family=Lato:wght@300&amp;display=swap');
+      .gold-bold { font-family: 'Montserrat', Arial Black, sans-serif; font-weight: 900; font-style: italic; fill: #F5B800; }
+      .script-r  { font-family: 'Playfair Display', Georgia, serif; font-style: italic; fill: #2D2D2D; }
+      .subtitle  { font-family: 'Lato', 'Helvetica Neue', sans-serif; font-weight: 300; fill: #2D2D2D; letter-spacing: 4px; }
+    </style>
+  </defs>
+
+  <!-- GOLD -->
+  <text x="10" y="78" class="gold-bold" font-size="72">GOLD</text>
+
+  <!-- Decorative R in script -->
+  <text x="218" y="82" class="script-r" font-size="80" font-style="italic">R</text>
+
+  <!-- USH in gold -->
+  <text x="258" y="78" class="gold-bold" font-size="72" font-style="italic">USH</text>
+
+  <!-- Perfumados subtitle -->
+  <text x="210" y="108" class="subtitle" font-size="18" text-anchor="middle">Perfumados</text>
+</svg>

@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gold: #F5B800;        /* dorado exacto del logo */
+    --gold-light: #FCD02E;
+    --charcoal: #1C1C1E;
+    --charcoal-muted: #6D6D72;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background-color: #FFFFFF;
+    color: #1C1C1E;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3 {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gold-500 text-charcoal font-bold px-6 py-3 rounded-full
+           transition-all duration-200 hover:bg-gold-400 active:scale-95
+           shadow-sm hover:shadow-md;
+  }
+
+  .btn-outline {
+    @apply border-2 border-charcoal text-charcoal font-semibold px-6 py-3 rounded-full
+           transition-all duration-200 hover:bg-charcoal hover:text-white active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply text-charcoal-muted font-medium px-4 py-2 rounded-full
+           transition-all duration-150 hover:bg-gray-100 hover:text-charcoal;
+  }
+
+  .card-luxury {
+    @apply bg-white rounded-2xl shadow-luxury overflow-hidden
+           transition-all duration-300 hover:shadow-luxury-hover hover:-translate-y-1;
+  }
+
+  .input-luxury {
+    @apply w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3
+           text-charcoal placeholder-charcoal-muted
+           focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent
+           transition-all duration-200;
+  }
+
+  .tag-category {
+    @apply text-xs font-semibold uppercase tracking-widest px-3 py-1
+           rounded-full border;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: var(--gold);
+  }
+
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, #C98F00 0%, #F5B800 50%, #FCD02E 100%);
+  }
+
+  .border-gold {
+    border-color: var(--gold);
+  }
+
+  /* Texto con gradiente dorado oscuro → brillante */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #A67A00 0%, #F5B800 55%, #FCD02E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Price display */
+.price-display {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Size selector */
+.size-option input[type="radio"]:checked + label {
+  background-color: #1C1C1E;
+  color: white;
+  border-color: #1C1C1E;
+}
