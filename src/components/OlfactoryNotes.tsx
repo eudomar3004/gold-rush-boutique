@@ -1,8 +1,9 @@
+import type { ReactNode } from "react";
 import type { OlfactoryNote } from "@/types";
 
 const NOTE_CONFIG: Record<
   OlfactoryNote,
-  { label: string; color: string; icon: React.ReactNode }
+  { label: string; color: string; icon: ReactNode }
 > = {
   floral: {
     label: "Floral",
